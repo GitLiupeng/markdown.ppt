@@ -15,100 +15,88 @@ style: |
         text-align:center;
         color:#FFF;
         font-style:italic;
-        font-size:20px;
-        }
-        #Cover p a {
-            color:#FFF;
-            }
-    #Picture h2 {
-        color:#FFF;
-        }
-    #SeeMore h2 {
-        font-size:100px
-        }
-    #SeeMore img {
-        width:0.72em;
-        height:0.72em;
+        font-size:40px;
         }
 ---
 
 # Markdown语法 {#Cover}
 
-*——使用markdown在github上写在线PPT*
+*使用markdown在github上写在线PPT*
 
 ![](pictures/cover.jpg)
 
+## 兼容 HTML
 
-## markdown语法
-
-1. 标题
-2. 列表
-3. 表格
-4. 图片
-5. 链接
-6. 代码块
-7. 其他
-
+1. ...Markdown 语法的目标是：成为一种适用于网络的书写语言。
+2. ...Markdown 的语法种类很少，只对应 HTML 标记的一小部分。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。
+3. ...要制约的只有一些 HTML 区块元素――比如 <div>、<table>、<pre>、<p> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。
 
 ## 标题
 
+1. ...利用 = （最高阶标题h1）和 - （第二阶标题h2）,任何数量的 = 和 - 都可以有效果。
+2. ...在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，h1 到 h6 。
+3. ...可以选择性地「闭合」标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 #，而行尾的 # 数量也不用和开头一样（行首的井字符数量决定标题的阶数）。
+    
+## 区块引用
+
+1. ...Markdown 标记区块引用是在每行的最前面加上 > 。
+2. ...Markdown 也允许你偷懒只在整个段落的第一行最前面加上 > 。
+3. ...区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 > 。
+4. ...引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等。
+
+## 列表
+
+1. ...无序列表使用星号、加号或是减号作为列表标记（* + -）。
+2. ...有序列表则使用数字接着一个英文句点。
+3. ...列表标记上使用的数字并不会影响输出的 HTML 结果。
+4. ...如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 <p> 标签包起来。
+5. ...如果要在列表项目内放进引用，那 > 就需要缩进。
+6. ...有时在行首会出现数字-句点-空白，要避免这样的状况，你可以在句点前面加上反斜杠。
+
+## 代码区块
+
+1. ...缩进 4 个空格或是 1 个制表符。
+2. ...一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
+
+## 分割线
+
+1. ...你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。
+
+## 链接
+
+...Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。
+
+1. ...行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。
+
+## 参考式链接
+
+1. ...参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接（不区分大小写）的标记。接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
+* ...方括号，里面输入链接文字，接着一个冒号，接着一个以上的空格或制表符，接着链接的网址，选择性地接着 title 内容，可以用单引号、双引号或是括弧包着。
+2. ...隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字。
+
+## 强调
+
+1. ...Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>。
+2. ...但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。
+3. ...如果要在文字前后直接插入普通的星号或底线，你可以用反斜线。
+
+## 代码
+
+1. ...如果要标记一小段行内代码，你可以用反引号把它包起来（`）。
+2. ...如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段。
+
+## 图片
+
+1. ...行内式的图片语法：
+* ...一个惊叹号 !
+* ...接着一个方括号，里面放上图片的替代文字。
+* ...接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。
+2. ...参考式的图片语法与参考式链接一样。
+
+## 其他
+
+1. ...Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号。
+2. ...Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：``\ ` * - {} [] () # + - . ! `` 
+3. ...Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。
 
 
-## All Kind of Lists
-
-1. Simple lists are marked with bullets
-2. Ordered lists begin with a number
-3. You can even nest lists one inside another
-    - Or mix their types
-    - But do not go too far
-    - Otherwise audience will be bored
-4. Look, seven rows exactly!
-
-## Serious Citations
-
-<figure markdown="1">
-
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
-
-<figcaption>Marcus Tullius Cicero</figcaption>
-</figure>
-
-## Code Samples
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <mark><head></mark> <mark class="comment"><!--Comment--></mark>
-        <title>Shower</title>
-        <meta charset="<mark class="important">UTF-8</mark>">
-        <link rel="stylesheet" href="screen.css">
-    <mark></head></mark>
-
-## Even Tables
-
-|  Locavore      | Umami       | Helvetica | Vegan     |
-+----------------|-------------|-----------|-----------+
-|* Fingerstache *| Kale        | Chips     | Keytar    |
-|* Sriracha     *| Gluten-free | Ennui     | Keffiyeh  |
-|* Thundercats  *| Jean        | Shorts    | Biodiesel |
-|* Terry        *| Richardson  | Swag      | Blog      |
-
-It’s good to have information organized.
-
-## Pictures
-{:.cover #Picture}
-
-![](pictures/picture.jpg)
-<!-- photo by John Carey, fiftyfootshadows.net -->
-
-## **You can even shout this way**
-
-## Inner Navigation
-
-1. Lets you reveal list items one by one
-2. …To keep some key points
-3. …In secret from audience
-4. …But it will work only once
-5. …Nobody wants to see the same joke twice
-
-## ![](http://shwr.me/pictures/logo.svg) [See more on GitHub](https://github.com/shower/shower/)
-{:.shout #SeeMore}

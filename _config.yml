@@ -6,16 +6,16 @@ relative_permalinks: false
 
 default_theme: ribbon
 default_width: 792
-default_lang: en
+default_lang: zh-CN
 default_body_class: list
 
 author:
-    name: Yours Truly
-    # url:  http://example.com/
+    name: liupeng
+    # url:  http://gitliupeng.github.io
     company:
-        name: Famous Inc.
-        # url:  http://example.com/
+        name: Youinnov.
+        # url:  http://www.youinnov.com/
 
-fork_url: https://github.com/shower/shower
+fork_url: https://github.com/GitLiupeng/jekyller
 progress: true
 line_numbers: true
