@@ -29,7 +29,7 @@ style: |
 
 1. ...Markdown 语法的目标是：成为一种适用于网络的书写语言。
 2. ...Markdown 的语法种类很少，只对应 HTML 标记的一小部分。不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。
-3. ...要制约的只有一些 HTML 区块元素――比如 <div>、<table>、<pre>、<p> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。
+3. ...要制约的只有一些 HTML 区块元素――比如 &lt;div>、&lt;table>、&lt;pre>、&lt;p> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。
 
 ## 标题
 
@@ -49,7 +49,7 @@ style: |
 1. ...无序列表使用星号、加号或是减号作为列表标记（* + -）。
 2. ...有序列表则使用数字接着一个英文句点。
 3. ...列表标记上使用的数字并不会影响输出的 HTML 结果。
-4. ...如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 <p> 标签包起来。
+4. ...如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 &lt;p> 标签包起来。
 5. ...如果要在列表项目内放进引用，那 > 就需要缩进。
 6. ...有时在行首会出现数字-句点-空白，要避免这样的状况，你可以在句点前面加上反斜杠。
 
@@ -76,7 +76,7 @@ style: |
 
 ## 强调
 
-1. ...Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>。
+1. ...Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;strong>。
 2. ...但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。
 3. ...如果要在文字前后直接插入普通的星号或底线，你可以用反斜线。
 
@@ -99,4 +99,33 @@ style: |
 2. ...Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：``\ ` * - {} [] () # + - . ! `` 
 3. ...Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。
 
+## github在线PPT
 
+1. fork 我的项目或者 fork 原作者的项目
+2. 修改`_config.yml`文件，配置姓名、公司、主题等
+3. 修改`index.md`文件，也就是PPT主要内容
+4. Commit & Push
+5. 访问 `http://username.github.io/project` 查看效果，username是你的账户名，project是你的项目名
+
+## 本地预览
+
+1. `git clone --recursive git@github.com:GitLiupeng/markdown.ppt.git`，如果不用`--recursive`，clone后要使用`git submodule init && git submodule update`
+2. 安装Ruby和RubyGems，[参考网站](https://forwardhq.com/help/installing-ruby-windows)
+3. 安装jekyll，`gem install jekyll`
+4. 运行服务器，`jekyll serve`
+5. 访问 `http://localhost:4000` 查看效果
+
+## 使用
+
+1. 封面标题 `# 你的封面标题`
+2. 幻灯片标题 `## 你的幻灯片标题`
+3. 会根据标题自动分页
+4. 接着就使用markdown语法尽情地玩耍吧
+
+## 相关链接
+
+1. [markdown语法](https://gitliupeng.github.io/2017/01/25/Markdown%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97.html)
+2. [安装Ruby和RubyGems](https://forwardhq.com/help/installing-ruby-windows)
+3. [jekyll安装和使用](http://jekyllcn.com/)
+4. [此项目的使用](https://github.com/GitLiupeng/markdown.ppt)
+5. [我的github博客](http://gitliupeng.github.io)
