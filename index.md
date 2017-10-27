@@ -38,6 +38,7 @@ style: |
 
 ## 嵌套规则
 
+```javascript
     #main {
         width: 97%;
         p, div {
@@ -45,7 +46,8 @@ style: |
             a { font-weight: bold; }
         }
         pre { font-size: 3em; }
-    }
+    }
+```
 
 ## 嵌套属性
 
