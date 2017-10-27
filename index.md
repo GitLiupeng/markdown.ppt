@@ -15,7 +15,7 @@ style: |
         text-align:center;
         color:#FFF;
         font-style:italic;
-        font-size:40px;
+        font-size:20px;
         }
 ---
 
