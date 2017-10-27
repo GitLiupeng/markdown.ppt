@@ -38,7 +38,7 @@ style: |
 
 ## 嵌套规则
 
-```javascript
+```scss
     #main {
         width: 97%;
         p, div {
