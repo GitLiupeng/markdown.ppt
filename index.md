@@ -132,11 +132,9 @@ style: |
 
     p {
         $width: 1000px;
-        width: $width/2;            // 使用了变量, 作为除法
+        width: $width/2;           
         color: #010203 + #040506;
         cursor: e + -resize;
-    }
-    p:before {
         content: "Foo " + Bar;
         font-family: sans- + "serif";
     }
@@ -160,10 +158,7 @@ style: |
 
 ## @extend
 
-    .error {
-      border: 1px #f00;
-      background-color: #fdd;
-    }
+    .error {background-color: #fdd;}
     .seriousError {
       @extend .error;
       border-width: 3px;
@@ -179,8 +174,6 @@ style: |
     p {
         @if $type == ocean {
             color: blue;
-        } @else if $type == matador {
-            color: red;
         } @else if $type == monster {
             color: green;
         } @else {
@@ -205,7 +198,6 @@ style: |
             background-image: url('/images/#{$animal}.png');
         }
     }
-
     @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
       #{$header} {
             font-size: $size;
@@ -226,13 +218,11 @@ style: |
         font: {
             family: Arial;
             size: $size;
-            weight: bold;
         }
     }
     .page-title {
         @include large-text(30px);
         padding: 4px;
-        margin-top: 10px;
     }
 
 ## 函数
