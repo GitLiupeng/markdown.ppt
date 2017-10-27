@@ -176,9 +176,7 @@ style: |
             color: blue;
         } @else if $type == monster {
             color: green;
-        } @else {
-            color: black;
-        }
+        } @else {color: black;}
     }
 
 ## @for
@@ -199,9 +197,7 @@ style: |
         }
     }
     @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
-      #{$header} {
-            font-size: $size;
-      }
+        #{$header} {font-size: $size;}
     }
 
 ## @while
@@ -216,7 +212,6 @@ style: |
 
     @mixin large-text($size) {
         font: {
-            family: Arial;
             size: $size;
         }
     }
@@ -228,7 +223,7 @@ style: |
 ## 函数
 
     $grid-width: 40px;
-        $gutter-width: 10px;
+    $gutter-width: 10px;
 
     @function grid-width($n) {
         @return $n * $grid-width + ($n - 1) * $gutter-width;
